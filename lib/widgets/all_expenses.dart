@@ -37,48 +37,45 @@ class _AllExpensesState extends State<AllExpenses> {
 
   @override
   Widget build(BuildContext context) {
-    return Padding(
-      padding: const EdgeInsets.only(top: 8),
-      child: Container(
-        decoration: BoxDecoration(
-          color: Colors.white,
-          borderRadius: BorderRadius.circular(16),
-        ),
-        child: Padding(
-          padding: const EdgeInsets.all(20),
-          child: Column(
-            children: [
-              AllExpensesHeader(),
-              SizedBox(height: 16),
-              Row(
-                children: List.generate(items.length, (index) {
-                  return Expanded(
-                    child: GestureDetector(
-                      onTap: () {
-                        setState(() {
-                          selectedIndex = index;
-                        });
-                      },
-                      child: index == 1
-                          ? Padding(
-                              padding: const EdgeInsets.symmetric(
-                                horizontal: 12,
-                              ),
-                              child: AllExpensesItem(
-                                itemModel: items[index],
-                                isActive: selectedIndex == index,
-                              ),
-                            )
-                          : AllExpensesItem(
+    return Container(
+      decoration: BoxDecoration(
+        color: Colors.white,
+        borderRadius: BorderRadius.circular(16),
+      ),
+      child: Padding(
+        padding: const EdgeInsets.all(20),
+        child: Column(
+          children: [
+            AllExpensesHeader(),
+            SizedBox(height: 16),
+            Row(
+              children: List.generate(items.length, (index) {
+                return Expanded(
+                  child: GestureDetector(
+                    onTap: () {
+                      setState(() {
+                        selectedIndex = index;
+                      });
+                    },
+                    child: index == 1
+                        ? Padding(
+                            padding: const EdgeInsets.symmetric(
+                              horizontal: 12,
+                            ),
+                            child: AllExpensesItem(
                               itemModel: items[index],
                               isActive: selectedIndex == index,
                             ),
-                    ),
-                  );
-                }),
-              ),
-            ],
-          ),
+                          )
+                        : AllExpensesItem(
+                            itemModel: items[index],
+                            isActive: selectedIndex == index,
+                          ),
+                  ),
+                );
+              }),
+            ),
+          ],
         ),
       ),
     );
