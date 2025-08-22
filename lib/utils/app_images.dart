@@ -38,6 +38,10 @@ class Assets {
   /// assets/images/logout.svg
   static const String imagesLogout = "assets/images/logout.svg";
 
+  /// Assets for imagesMask group
+  /// assets/images/Mask group.png
+  static const String imagesMaskgroup = "assets/images/Mask group.png";
+
   /// Assets for imagesMaskCreditcard
   /// assets/images/mask_creditcard.svg
   static const String imagesMaskCreditcard = "assets/images/mask_creditcard.svg";
