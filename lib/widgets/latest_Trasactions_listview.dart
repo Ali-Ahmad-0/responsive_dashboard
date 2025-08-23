@@ -5,7 +5,7 @@ import 'package:responsive_dashboard/widgets/user_info_listtile.dart';
 
 class LatestTrasactionsListview extends StatelessWidget {
   LatestTrasactionsListview({super.key});
-  List<UserInfoModel> items = [
+ final List<UserInfoModel> items = [
     UserInfoModel(
       subTitle: 'Madraniadi20@gmail',
       title: 'Madrani Andi',

@@ -2,9 +2,9 @@ import 'package:flutter/material.dart';
 import 'package:responsive_dashboard/utils/styles_app.dart';
 
 class CustomButton extends StatelessWidget {
-  CustomButton({super.key, required this.data, this.bgColor, this.txtColor});
+ const CustomButton({super.key, required this.data, this.bgColor, this.txtColor});
   final String data;
-  Color? bgColor, txtColor;
+ final Color? bgColor, txtColor;
   @override
   Widget build(BuildContext context) {
     return SizedBox(
