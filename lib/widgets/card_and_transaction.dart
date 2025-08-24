@@ -7,21 +7,18 @@ class CardAndTransaction extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return Padding(
-      padding: const EdgeInsets.only(top: 40),
-      child: Container(
-        padding: EdgeInsets.all(24),
-        decoration: BoxDecoration(
-          color: Color(0xffFFFFFF),
-          borderRadius: BorderRadius.circular(12),
-        ),
-        child: Column(
-          children: [
-            MyCardSection(),
-            Divider(color: Color(0xfff1f1f1), height: 40),
-            TransactionHistory(),
-          ],
-        ),
+    return Container(
+      padding: EdgeInsets.all(24),
+      decoration: BoxDecoration(
+        color: Color(0xffFFFFFF),
+        borderRadius: BorderRadius.circular(12),
+      ),
+      child: Column(
+        children: [
+          MyCardSection(),
+          Divider(color: Color(0xfff1f1f1), height: 40),
+          TransactionHistory(),
+        ],
       ),
     );
   }

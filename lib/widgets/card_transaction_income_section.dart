@@ -7,13 +7,11 @@ class CardTransactionIncomeSection extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return Expanded(
-      child: Column(
-        children: [
-          CardAndTransaction(), 
-          Expanded(child: Income())
-        ],
-      ),
+    return Column(
+      children: [
+        CardAndTransaction(),
+        Expanded(child: Income()),
+      ],
     );
   }
 }

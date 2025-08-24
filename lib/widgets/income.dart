@@ -11,7 +11,7 @@ class Income extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Padding(
-      padding: const EdgeInsets.only(top: 24),
+      padding: const EdgeInsets.only(top: 24, bottom: 20),
       child: Container(
         padding: EdgeInsets.all(20),
         decoration: BoxDecoration(
@@ -22,18 +22,21 @@ class Income extends StatelessWidget {
           children: [
             IncomeHeader(),
             SizedBox(height: 16),
-            Expanded(
-              child: Row(
-                crossAxisAlignment: CrossAxisAlignment.start,
-                children: [
-                  Expanded(flex: 1, child: IncomeChart()),
-                  SizedBox(width: 40),
-                  Expanded(flex: 2, child: IncomeDetailsListview()),
-                ],
-              ),
+            Row(
+              crossAxisAlignment: CrossAxisAlignment.center,
+              children: [
+                Expanded(flex: 1, child: IncomeChart()),
+                SizedBox(width: 20),
+                Expanded(flex: 3, child: IncomeDetailsListview()),
+              ],
             ),
             Divider(height: 48, color: Color(0xfff1f1f1)),
-            Text('See detail', style: AppStyles.textSimiBold16.copyWith(color: Color(0xff4EB7F2))),
+            Text(
+              'See detail',
+              style: AppStyles.textSimiBold16.copyWith(
+                color: Color(0xff4EB7F2),
+              ),
+            ),
           ],
         ),
       ),
